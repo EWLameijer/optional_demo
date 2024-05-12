@@ -16,7 +16,7 @@ public class ItemController {
     }
 
     @GetMapping("{name}")
-    public Item getById(@PathVariable String name) {
+    public Item getByName(@PathVariable String name) {
         Item item = itemRepository.findByName(name);
         String storedName = item.getName();
         String moreImpressiveName = Character.toUpperCase(storedName.charAt(0)) + storedName.substring(1);
